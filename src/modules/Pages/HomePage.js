@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Navigation from '../../components/Header';
 import Footer from '../../components/Footer';
 import avatar from '../../assets/images/avatar.jpg';
+import {Link} from 'react-router-dom';
 import Loading from '../../components/Loading';
 import SocialMediaBar from '../../components/SocialMediaBar';
 class HomePage extends Component {
@@ -36,9 +37,9 @@ class HomePage extends Component {
                   <span className="heading-primary_name">Dinh Tran</span>
                   <span className="heading-primary_job">Web Developer</span>
                 </h3>
-                <a href="/about" className="btn primary">
+                <Link to="/about" className="btn primary">
                   Get more
-                </a>
+                </Link>
               </div>
             </header>
 
@@ -57,9 +58,9 @@ class HomePage extends Component {
                     Technology (HCMUT). If you care about me, please click the
                     following button to get more information. Thanks!
                   </p>
-                  <a href="/about" className="btn info">
+                  <Link to="/about" className="btn info">
                     More Info
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

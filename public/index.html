@@ -18,28 +18,32 @@
         var exit = document.getElementById('exit');
         var list = document.querySelectorAll('nav ul li a');
 
-        menu.addEventListener('click', function(e) {
-            nav.classList.toggle('hide-mobile');
+        if (menu) {
+            menu.addEventListener('click', function(e) {
+                nav.classList.toggle('hide-mobile');
 
-            list.forEach((link, idx) => {
-                if (link.style.animation) {
-                    link.style.animation = ''
-                } else {
-                    link.style.animation = `navLinksFade 0.5s ease forwards ${idx*0.4 + 0.4}s`;
-                }
-            })
-            e.preventDefault();
-        });
+                list.forEach((link, idx) => {
+                    if (link.style.animation) {
+                        link.style.animation = ''
+                    } else {
+                        link.style.animation = `navLinksFade 0.5s ease forwards ${idx*0.4 + 0.4}s`;
+                    }
+                })
+                e.preventDefault();
+            });
+        }
 
-        exit.addEventListener('click', function(e) {
-            nav.classList.add('hide-mobile');
-            list.forEach((link, idx) => {
-                if (link.style.animation) {
-                    link.style.animation = '';
-                }
-            })
-            e.preventDefault();
-        });
+        if (exit) {
+            exit.addEventListener('click', function(e) {
+                nav.classList.add('hide-mobile');
+                list.forEach((link, idx) => {
+                    if (link.style.animation) {
+                        link.style.animation = '';
+                    }
+                })
+                e.preventDefault();
+            });
+        }
     </script>
 
     <script>

@@ -51,9 +51,9 @@ class Navigation extends React.PureComponent {
         return (
             <div className="header-container">
                 <button onClick={() => this.topFunction()} className="btn warning" id="topBtn"><i className="fas fa-chevron-up"></i></button>
-                <a href="#" className="logo-box">
+                <Link to="/home" className="logo-box">
                     <img src={logo} alt="Phook" className="logo"/>
-                </a>
+                </Link>
                 
                 <nav>
                     <a href="#" className="hide-desktop">

@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/images/logo-dark.png';
+import {Link} from 'react-router-dom';
 
 class Footer extends React.PureComponent {
     render() {
@@ -7,16 +8,16 @@ class Footer extends React.PureComponent {
             <footer>
                 <div className="footer-container">
                     <div>
-                        <a href="#">
+                        <Link to="/home">
                             <img src={logo} alt="logo" className="logo"/>
-                        </a>
+                        </Link>
                     </div>
 
                     <div className="footer-menu">
                         <h3>Menu</h3>
                         <ul>
-                            <li><a href="/home">Home</a></li>
-                            <li><a href="/about">About</a></li>
+                            <li><Link to="/home">Home</Link></li>
+                            <li><Link to="/about">About</Link></li>
                         </ul>
                     </div>
 
